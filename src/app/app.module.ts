@@ -16,20 +16,17 @@ import {
   MatSnackBarModule
 } from "@angular/material";
 import { HomeComponent } from "./home/home.component";
-import { ToolbarComponent } from "./toolbar/toolbar.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { MovieComponent } from "./movie/movie.component";
 import { ProfileComponent } from "./profile/profile.component";
-import { Routes } from "@angular/router";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ToolbarComponent,
     PageNotFoundComponent,
     MovieComponent,
     ProfileComponent
@@ -46,7 +43,8 @@ import { FormsModule } from "@angular/forms";
     MatInputModule,
     MatSnackBarModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { Movie } from "./../models/movie";
 import { User } from "./../models/user";
 import {
   HttpClient,
@@ -20,8 +21,19 @@ export class UserService {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
   };
 
-  getMovies(): Observable<User[]> {
-    return this.HttpClient.get<User[]>(`${this.url}/movies`).pipe(
+  loginUser(user: User): Observable<User> {
+    return this.HttpClient.post<User>(
+      this.url + "user",
+      JSON.stringify(user),
+      this.httpOptions
+    ).pipe(
+      retry(2),
+      catchError(this.handleError)
+    );
+  }
+
+  getMovies(): Observable<Movie[]> {
+    return this.HttpClient.get<Movie[]>(`${this.url}movies`).pipe(
       retry(2),
       catchError(this.handleError)
     );
@@ -29,17 +41,6 @@ export class UserService {
 
   getMovieById(id: number): Observable<User> {
     return this.HttpClient.get<User>(this.url + "/movies/" + id).pipe(
-      retry(2),
-      catchError(this.handleError)
-    );
-  }
-
-  loginUser(user: User): Observable<User> {
-    return this.HttpClient.post<User>(
-      this.url,
-      JSON.stringify(user),
-      this.httpOptions
-    ).pipe(
       retry(2),
       catchError(this.handleError)
     );

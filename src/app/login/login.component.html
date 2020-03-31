@@ -1,5 +1,5 @@
 <div class="login-items">
-  <form class="from-items">
+  <form [formGroup]="formlogin" (ngSubmit)="onSubmit()" class="from-items">
     <div class="logo-netflix">
       <img
         class="logo-netflix--style"
@@ -11,6 +11,7 @@
     <mat-form-field class="example-full-width">
       <mat-label class="label">Email</mat-label>
       <input
+        formControlName="login"
         readonly="false"
         class="inputLogin"
         type="email"
@@ -23,6 +24,7 @@
     <mat-form-field class="example-full-width">
       <mat-label class="label">Senha</mat-label>
       <input
+        formControlName="password"
         class="inputLogin"
         type="password"
         matInput
