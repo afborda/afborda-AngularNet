@@ -1,3 +1,10 @@
-<ul *ngFor="let movie of Movies">
-  <li>{{ movie.Title }}</li>
-</ul>
+<div class="movies wrapper">
+  <h1 class="category-type">Ação</h1>
+  <div class="cards">
+    <div class="item" *ngFor="let movie of Movies" class="example-card">
+      <div class="">
+        <img class="card-Items" mat-card-image [src]="movie.Poster" alt="opa" />
+      </div>
+    </div>
+  </div>
+</div>

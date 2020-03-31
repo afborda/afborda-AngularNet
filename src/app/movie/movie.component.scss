@@ -1,0 +1,28 @@
+.card-Items {
+  min-width: 200px;
+  height: 300px;
+  padding: 0 5px 0 5px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  margin-left: 50px;
+}
+
+.movies {
+  background-color: #141414;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.category-type {
+  margin: 0;
+  color: #e5e5e5;
+  font-weight: 500;
+  margin-left: 50px;
+  padding: 15px;
+  font-size: 24px;
+}
