@@ -1,0 +1,50 @@
+.login-items {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background: url("../../assets/img/netflix-the-witcher-cm.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.from-items {
+  display: flex;
+  width: 300px;
+  height: 400px;
+  flex-direction: column;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.label {
+  color: #fff;
+}
+
+.inputLogin {
+  color: #fff;
+}
+
+.logo-netflix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-netflix--style {
+  width: 230px;
+  height: 150px;
+}
+
+.button--style {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  background-color: #E50914;
+  padding: 5px;
+}
+
+.color-link-active {
+  background-color: #E50914;
+}
