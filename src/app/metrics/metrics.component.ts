@@ -27,7 +27,6 @@ export class MetricsComponent implements OnInit {
       return a.views > b.views ? 1 : b.views > a.views ? -1 : 0;
     });
     this.TopMovies = topMovies.reverse();
-
     console.log(topMovies);
   }
 }
