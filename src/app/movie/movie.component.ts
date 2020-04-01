@@ -16,7 +16,6 @@ export class MovieComponent implements OnInit {
   }
 
   loadMovies() {
-    console.log(this.useService.getMovies());
     return this.useService.getMovies().subscribe((data: {}) => {
       this.Movies = data;
     });

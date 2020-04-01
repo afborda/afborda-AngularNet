@@ -39,13 +39,6 @@ export class UserService {
     );
   }
 
-  getMovieById(id: number): Observable<User> {
-    return this.HttpClient.get<User>(this.url + "/movies/" + id).pipe(
-      retry(2),
-      catchError(this.handleError)
-    );
-  }
-
   handleError(error: HttpErrorResponse) {
     let errorMessage = "";
     if (error.error instanceof ErrorEvent) {
@@ -54,7 +47,6 @@ export class UserService {
       errorMessage =
         `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
     }
-    console.log(errorMessage);
     return throwError(errorMessage);
   }
 }

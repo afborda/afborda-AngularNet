@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
     this.userService.loginUser(credentials).subscribe(
       user => {
         this.setLocalStorage(user);
-        console.log(user);
         this.snackBar.open(
           "Logged in Successfuly. Welcome " + user[0].name + " ! ",
           "OK",
@@ -43,7 +42,6 @@ export class LoginComponent implements OnInit {
       },
       err => {
         this.snackBar.open("Error ", "OK", { duration: 2000 });
-        console.log(err);
       }
     );
   }
