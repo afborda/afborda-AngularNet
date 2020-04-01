@@ -25,13 +25,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   setLocalStorage(value) {
-    localStorage.setItem("testObject", JSON.stringify(value));
+    localStorage.setItem("loggedUser", JSON.stringify(value));
   }
 
   onSubmit() {
     const credentials = this.formlogin.value;
     this.userService.loginUser(credentials).subscribe(
       user => {
+        localStorage.removeItem("loggedUser");
         this.setLocalStorage(user);
         this.snackBar.open(
           "Logged in Successfuly. Welcome " + user[0].name + " ! ",

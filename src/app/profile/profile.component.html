@@ -1,1 +1,26 @@
-<p>profile works!</p>
+<div class="perfil">
+  <div *ngIf="userImage; else imageLogin">
+    <p>Entrei aqui primero ng!</p>
+  </div>
+  <h1 class="name-user">{{ Perfil.name }}</h1>
+  <div class="data-user-style">
+    <h2 class="data-user">Login: {{ Perfil.login }}</h2>
+
+    <h2 class="data-user">Email de cadastro: {{ Perfil.email }}</h2>
+  </div>
+  <div class="list-movies">
+    <div *ngFor="let movie of Perfil.preferredMovies">
+      <img class="movies" src="{{ movie.Poster }}" alt="{{ movie.title }}" />
+    </div>
+  </div>
+
+  <ng-template #imageLogin>
+    <div class="imageUser">
+      <img
+        class="image-user"
+        src="../../assets/img/backGroundImageLogin.jpg"
+        alt="{{ Perfil.name }}"
+      />
+    </div>
+  </ng-template>
+</div>

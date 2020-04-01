@@ -1,0 +1,48 @@
+.perfil {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  background-color: #2B2B2B;
+  overflow: hidden;
+}
+
+.movies {
+  width: 150px;
+  height: 200px;
+  padding: 5px;
+}
+
+.list-movies {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.data-user-style {
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.name-user {
+  color: #fff;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.image-user {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  ;
+}
+
+.data-user {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}

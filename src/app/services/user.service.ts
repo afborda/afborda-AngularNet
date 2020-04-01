@@ -32,6 +32,17 @@ export class UserService {
     );
   }
 
+  getFilter(movie: Movie): Observable<Movie> {
+    return this.HttpClient.post<Movie>(
+      this.url + "movies",
+      JSON.stringify(movie),
+      this.httpOptions
+    ).pipe(
+      retry(2),
+      catchError(this.handleError)
+    );
+  }
+
   getMovies(): Observable<Movie[]> {
     return this.HttpClient.get<Movie[]>(`${this.url}movies`).pipe(
       retry(2),
