@@ -1,0 +1,12 @@
+<div class="metrics">
+  <h1 class="title">Metricas</h1>
+
+  <div class="movie-item">
+    <h2 class="top-movies">Top 5 filmes mais visualizados</h2>
+    <div class="top-movie" *ngFor="let movie of TopMovies | slice: 0:5">
+      <p class="title">{{ movie.Title }}</p>
+      <img class="image-item" src="{{ movie.Poster }}" alt="" />
+      <p class="title">Total de Views: {{ movie.views }}</p>
+    </div>
+  </div>
+</div>

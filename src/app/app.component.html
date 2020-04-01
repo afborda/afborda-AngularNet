@@ -1,13 +1,18 @@
 <mat-toolbar class="toolbar backfroundBlack" color="primary">
-  <img
-    src="../assets/img/netflixPng.png"
-    class="logo-toolbar"
-    alt="Netflix logo"
-  />
+  <a routerLink="/home">
+    <img
+      src="../assets/img/netflix.png"
+      class="logo-toolbar"
+      alt="Netflix logo"
+    />
+  </a>
   <div>
     <a mat-button routerLink="/home" routerLinkActive="mat-accent">Home</a>
     <a mat-button routerLink="/movie" routerLinkActive="mat-accent">Filmes</a>
     <a mat-button routerLink="/profile" routerLinkActive="mat-accent">Perfil</a>
+    <a mat-button routerLink="/metrics" routerLinkActive="mat-accent"
+      >Metricas</a
+    >
   </div>
 </mat-toolbar>
 

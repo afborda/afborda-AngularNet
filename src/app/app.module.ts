@@ -14,7 +14,8 @@ import {
   MatBadgeModule,
   MatInputModule,
   MatSnackBarModule,
-  MatCardModule
+  MatCardModule,
+  MatDialogModule
 } from "@angular/material";
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
@@ -22,6 +23,8 @@ import { MovieComponent } from "./movie/movie.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MetricsComponent } from "./metrics/metrics.component";
+import { MoviePlayComponent } from "./movie-play/movie-play.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HomeComponent,
     PageNotFoundComponent,
     MovieComponent,
-    ProfileComponent
+    ProfileComponent,
+    MetricsComponent,
+    MoviePlayComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
